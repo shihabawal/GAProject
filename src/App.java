@@ -1,3 +1,9 @@
+/*
+TODO1: Finish the code i.e. feed children back to population
+TODO2: develop fitness algorithm to calculate fitness of 1 individual
+TODO3: develop more selection methods like fitness based selection
+TODO4: think about abstract factory pattern for selection
+*/
 public class App {
     private static final String Individual = null;
 
@@ -14,9 +20,25 @@ public class App {
         // ofspring = mutation.mutate(ofspring);
 
         // Fitness filter = new Fitness();
-        // population.add(filter.filter(ofspring));
+        // population.add(ofspring);
 
-        // Population population = new Population();
+        Population population = new Population(10);
+        Selection selector = new Selection();
+        Individual[] couple = { null, null };
+        System.out.println();
+        couple = selector.rouletteWheelSelection(population);
+        System.out.println(couple[0]);
+        System.out.println(couple[1]);
+        System.out.println();
+        Xover xover = new Xover();
+        Individual[] children = { null, null };
+        children = xover.halfXover(couple);
+        System.out.println(children[0]);
+        System.out.println(children[1]);
+        Mutation mutate = new Mutation();
+        children[1] = mutate.oneRandomCodonMutation(children[1]);
+        System.out.println(children[1]);
+
         // Individual fittest;
         // Individual secondFittest;
 
