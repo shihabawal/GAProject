@@ -1,23 +1,24 @@
 import java.util.ArrayList;
 
 public class Population {
-     ArrayList<Individual> population;
+    ArrayList<Individual> population;
 
     public void add(Individual individual) {
         population.add(individual);
     }
+
     int popSize = 10;
     Individual[] individuals = new Individual[10];
     int fittest = 0;
 
-    //Initialize population
+    // Initialize population
     public void initializePopulation(int size) {
         for (int i = 0; i < individuals.length; i++) {
             individuals[i] = new Individual();
         }
     }
 
-    //Get the fittest individual
+    // Get the fittest individual
     public Individual getFittest() {
         int maxFit = Integer.MIN_VALUE;
         int maxFitIndex = 0;
@@ -31,7 +32,7 @@ public class Population {
         return individuals[maxFitIndex];
     }
 
-    //Get the second most fittest individual
+    // Get the second most fittest individual
     public Individual getSecondFittest() {
         int maxFit1 = 0;
         int maxFit2 = 0;
@@ -46,7 +47,7 @@ public class Population {
         return individuals[maxFit2];
     }
 
-    //Get index of least fittest individual
+    // Get index of least fittest individual
     public int getLeastFittestIndex() {
         int minFitVal = Integer.MAX_VALUE;
         int minFitIndex = 0;
@@ -59,7 +60,7 @@ public class Population {
         return minFitIndex;
     }
 
-    //Calculate fitness of each individual
+    // Calculate fitness of each individual
     public void calculateFitness() {
 
         for (int i = 0; i < individuals.length; i++) {

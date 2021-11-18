@@ -12,10 +12,10 @@ public class Mutation {
     void mutation() {
         Random rn = new Random();
 
-        //Select a random mutation point
+        // Select a random mutation point
         int mutationPoint = rn.nextInt(population.individuals[0].geneLength);
 
-        //Flip values at the mutation point
+        // Flip values at the mutation point
         if (fittest.genes[mutationPoint] == 0) {
             fittest.genes[mutationPoint] = 1;
         } else {

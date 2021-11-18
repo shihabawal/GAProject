@@ -8,7 +8,7 @@ public class Individual {
     public Individual() {
         Random rn = new Random();
 
-        //Set genes randomly for each individual
+        // Set genes randomly for each individual
         for (int i = 0; i < genes.length; i++) {
             genes[i] = Math.abs(rn.nextInt() % 2);
         }
@@ -16,7 +16,7 @@ public class Individual {
         fitness = 0;
     }
 
-    //Calculate fitness
+    // Calculate fitness
     public void calcFitness() {
 
         fitness = 0;

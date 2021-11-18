@@ -16,31 +16,29 @@ public class App {
         // Fitness filter = new Fitness();
         // population.add(filter.filter(ofspring));
 
-    //     Population population = new Population();
-    //     Individual fittest;
-    //     Individual secondFittest;
+        // Population population = new Population();
+        // Individual fittest;
+        // Individual secondFittest;
 
-    //      Individual getFittestOffspring() {
-    //      if (fittest.fitness > secondFittest.fitness) {
-    //          return fittest;
-    //      }
-    //      return secondFittest;
-    //     }
+        // Individual getFittestOffspring() {
+        // if (fittest.fitness > secondFittest.fitness) {
+        // return fittest;
+        // }
+        // return secondFittest;
+        // }
 
-    //    void addFittestOffspring() {
+        // void addFittestOffspring() {
 
-    //     //Update fitness values of offspring
-    //     fittest.calcFitness();
-    //     secondFittest.calcFitness();
+        // //Update fitness values of offspring
+        // fittest.calcFitness();
+        // secondFittest.calcFitness();
 
-    //     //Get index of least fit individual
-    //     int leastFittestIndex = population.getLeastFittestIndex();
+        // //Get index of least fit individual
+        // int leastFittestIndex = population.getLeastFittestIndex();
 
-    //     //Replace least fittest individual from most fittest offspring
-    //     population.individuals[leastFittestIndex] = getFittestOffspring();
-    //   }
+        // //Replace least fittest individual from most fittest offspring
+        // population.individuals[leastFittestIndex] = getFittestOffspring();
+        // }
     }
-    
 
-    
 }

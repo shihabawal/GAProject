@@ -12,10 +12,10 @@ public class Xover {
     void crossover() {
         Random rn = new Random();
 
-        //Select a random crossover point
+        // Select a random crossover point
         int crossOverPoint = rn.nextInt(population.individuals[0].geneLength);
 
-        //Swap values among parents
+        // Swap values among parents
         for (int i = 0; i < crossOverPoint; i++) {
             int temp = fittest.genes[i];
             fittest.genes[i] = secondFittest.genes[i];
