@@ -12,12 +12,24 @@ public class Population {
         }
     }
 
+    public int size() {
+        return 0;
+    }
+
     public Individual getIndividual(int i) {
         return individuals.get(i); // individual[i]
     }
 
+    public Individual[] getIndividual() {
+        return null;
+    }
+
     public int getPopulationCount() {
         return individuals.size();
+    }
+
+    public double getPopulationFitness() {
+        return 0;
     }
 
     // // Get the fittest individual
@@ -78,4 +90,10 @@ public class Population {
         }
         return toPrint;
     }
+
+  
+
+   
+
+  
 }
