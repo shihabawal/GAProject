@@ -58,4 +58,9 @@ public class Individual {
     public String toString() {
         return Arrays.toString(genes) + " fitness: " + fitness;
     }
+
+    public int size() {
+        return genes.length;
+    }
+
 }
