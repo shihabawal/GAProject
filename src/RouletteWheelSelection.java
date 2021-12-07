@@ -1,0 +1,37 @@
+import java.util.Random;
+
+public class RouletteWheelSelection implements Selection {
+
+    @Override
+    public Individual[] select(Population population) {
+        // Get individuals
+        Individual individuals[] = population.getIndividual();
+        // Spin roulette wheel
+        double populationFitness = population.getPopulationFitness();
+        double rouletteWheelPosition = Math.random() * populationFitness;
+        // Find parent
+        double spinWheel = 0;
+        Individual individual1 = new Individual();
+        for (Individual individual : individuals) {
+            spinWheel += Fitness.getFitness(individual);
+            if (spinWheel >= rouletteWheelPosition) {
+                individual1 = individual;
+                break;
+                // return individual;
+            }
+        }
+        spinWheel = 0;
+        Individual individual2 = new Individual();
+        for (Individual individual : individuals) {
+            spinWheel += Fitness.getFitness(individual);
+            if (spinWheel >= rouletteWheelPosition) {
+                individual2 = individual;
+                break;
+            }
+        }
+        // return individuals[population.size() - 1];
+        Individual[] ret = { individual1, individual2 };
+        return ret;
+    }
+
+}
