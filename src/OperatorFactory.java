@@ -3,5 +3,5 @@ public interface OperatorFactory {
 
     public XOver getXover();
 
-    public Mutation getMustation();
+    public Mutation getMutation();
 }

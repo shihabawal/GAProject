@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Random;
 
 public class RouletteWheelSelection implements Selection {
@@ -5,7 +6,7 @@ public class RouletteWheelSelection implements Selection {
     @Override
     public Individual[] select(Population population) {
         // Get individuals
-        Individual individuals[] = population.getIndividual();
+        ArrayList<Individual> individuals = population.getIndividuals();
         // Spin roulette wheel
         double populationFitness = population.getPopulationFitness();
         double rouletteWheelPosition = Math.random() * populationFitness;

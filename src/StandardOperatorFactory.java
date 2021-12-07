@@ -11,7 +11,7 @@ public class StandardOperatorFactory implements OperatorFactory {
     }
 
     @Override
-    public Mutation getMustation() {
+    public Mutation getMutation() {
         return new SingleCodonMutation();
     }
 

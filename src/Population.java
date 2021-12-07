@@ -20,8 +20,8 @@ public class Population {
         return individuals.get(i); // individual[i]
     }
 
-    public Individual[] getIndividual() {
-        return null;
+    public ArrayList<Individual> getIndividuals() {
+        return individuals;
     }
 
     public int getPopulationCount() {
