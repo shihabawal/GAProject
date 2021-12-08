@@ -16,7 +16,7 @@ public class StandardGAController extends GAController {
 
     public void run() {
 
-        Population population = new Population(10);
+        Population population = Population.getInstance();
         System.out.println(population);
         System.out.println();
         Individual[] couple = selector.select(population);

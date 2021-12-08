@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="dna">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/resources/dna.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

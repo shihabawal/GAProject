@@ -1,5 +1,6 @@
 import ga.GAController;
 import ga.StandardGAController;
+import ga.population.Population;
 
 /*
 TODO: Finish the code i.e. feed children back to population
@@ -14,7 +15,7 @@ public class App {
         GAController controller = new StandardGAController();
         controller.initalize();
         controller.run();
-
+        Population.getInstance();
     }
 
 }
