@@ -4,10 +4,21 @@ import java.util.ArrayList;
 
 public class Population {
 
+    private static Population instance;
+
+    private static int size = 10;
+
+    public static Population getInstance() {
+        if (instance == null) {
+            instance = new Population(size);
+        }
+        return instance;
+    }
+
     ArrayList<Individual> individuals;
 
     // Define and intialize population
-    public Population(int size) {
+    private Population(int size) {
         individuals = new ArrayList<>();
         for (int i = 0; i < size; i++) {
             Individual newIndividual = new Individual();
@@ -16,7 +27,7 @@ public class Population {
     }
 
     public int size() {
-        return 0;
+        return size;
     }
 
     public Individual getIndividual(int i) {

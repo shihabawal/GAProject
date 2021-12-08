@@ -17,7 +17,7 @@ public class StandardGAController extends GAController {
         Individual[] couple = { null, null };
         Individual[] children = { null, null };
         do {
-            Population population = new Population(10);
+            Population population = Population.getInstance();
             // System.out.println(population);
             // System.out.println();
             couple = selector.select(population);
