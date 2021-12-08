@@ -1,9 +1,20 @@
+package ga;
+//TODO: Max generations e.g. 1000
+
+//TODO: target
+
+import ga.population.Individual;
+import ga.population.Population;
+
 public class StandardGAController extends GAController {
 
-    void run() {
-        selector = new RandomSelection();
-        xOver = new MidPointXOver();
-        mutator = new SingleCodonMutation();
+    @Override
+    public void initalize() {
+        operatorFactory = new StandardOperatorFactory();
+        super.initalize();
+    }
+
+    public void run() {
 
         Population population = new Population(10);
         System.out.println(population);

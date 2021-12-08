@@ -1,3 +1,12 @@
+package ga;
+
+import ga.mutataion.Mutation;
+import ga.mutataion.SingleCodonMutation;
+import ga.selection.RouletteWheelSelection;
+import ga.selection.Selection;
+import ga.xover.MidPointXOver;
+import ga.xover.XOver;
+
 public class StandardOperatorFactory implements OperatorFactory {
 
     @Override

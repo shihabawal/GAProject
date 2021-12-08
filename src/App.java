@@ -1,3 +1,6 @@
+import ga.GAController;
+import ga.StandardGAController;
+
 /*
 TODO: Finish the code i.e. feed children back to population
 TODO: develop more selection methods like fitness based selection
@@ -9,6 +12,7 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         GAController controller = new StandardGAController();
+        controller.initalize();
         controller.run();
 
     }

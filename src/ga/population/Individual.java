@@ -1,3 +1,5 @@
+package ga.population;
+
 import java.util.Random;
 import java.util.Arrays;
 

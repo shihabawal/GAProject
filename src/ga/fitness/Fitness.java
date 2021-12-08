@@ -1,3 +1,7 @@
+package ga.fitness;
+
+import ga.population.Individual;
+
 import java.util.ArrayList;
 
 public class Fitness {
@@ -24,7 +28,7 @@ public class Fitness {
     }
 
     // Calculate inidividuals fittness by comparing it to our candidate solution
-    static int getFitness(Individual individual) {
+    public static int getFitness(Individual individual) {
         int fitness = 0;
         // Loop through our individuals genes and compare them to our cadidates
         for (int i = 0; i < individual.size() && i < solution.size(); i++) {

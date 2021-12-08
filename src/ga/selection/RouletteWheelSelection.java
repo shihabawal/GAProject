@@ -1,3 +1,9 @@
+package ga.selection;
+
+import ga.population.Individual;
+import ga.population.Population;
+import ga.fitness.Fitness;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -21,6 +27,7 @@ public class RouletteWheelSelection implements Selection {
                 // return individual;
             }
         }
+        rouletteWheelPosition = Math.random() * populationFitness;
         spinWheel = 0;
         Individual individual2 = new Individual();
         for (Individual individual : individuals) {

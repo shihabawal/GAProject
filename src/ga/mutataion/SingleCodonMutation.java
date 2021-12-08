@@ -1,3 +1,7 @@
+package ga.mutataion;
+
+import ga.population.Individual;
+
 import java.util.Random;
 
 public class SingleCodonMutation implements Mutation {
