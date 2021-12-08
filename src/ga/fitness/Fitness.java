@@ -31,7 +31,7 @@ public class Fitness {
     public static int getFitness(Individual individual) {
         int fitness = 0;
         // Loop through our individuals genes and compare them to our cadidates
-        for (int i = 0; i < individual.size() && i < solution.size(); i++) {
+        for (int i = 0; i < individual.getGeneLength() && i < solution.size(); i++) {
             if (individual.getCodon(i) == solution.get(i)) {
                 fitness++;
             }

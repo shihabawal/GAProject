@@ -13,6 +13,7 @@ public class Individual {
 
     // initailize an individual and their genes
     public Individual() {
+        fitness = 0;
         genes = new ArrayList<>();
         Random rn = new Random();
 
@@ -34,7 +35,6 @@ public class Individual {
             }
             // genes[i] = Math.abs(rn.nextInt() % 2);
         }
-        fitness = 0;
     }
 
     public Individual(List<Gene<Character>> genes) {
@@ -62,13 +62,26 @@ public class Individual {
         return geneLength;
     }
 
+    public int getFitness() {
+        return fitness;
+    }
+
+    public void setFitness(int fitness) {
+        this.fitness = fitness;
+    }
+
     @Override
     public String toString() {
         return Arrays.toString(genes.toArray()) + " fitness: " + fitness;
     }
 
-    public int size() {
-        return genes.size();
+    public boolean isTarget() {
+        if ((this.getCodon((int) ((this.getGeneLength() - 1) * .25)) == 'a')
+                && (this.getCodon((int) ((this.getGeneLength() - 1) * .75)) == 'a')) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }

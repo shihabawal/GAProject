@@ -10,7 +10,8 @@ public class Population {
     public Population(int size) {
         individuals = new ArrayList<>();
         for (int i = 0; i < size; i++) {
-            individuals.add(new Individual());
+            Individual newIndividual = new Individual();
+            individuals.add(newIndividual);
         }
     }
 
@@ -31,7 +32,11 @@ public class Population {
     }
 
     public double getPopulationFitness() {
-        return 0;
+        int totalFitness = 0;
+        for (Individual i : individuals) {
+            totalFitness += i.getFitness();
+        }
+        return totalFitness;
     }
 
     @Override
