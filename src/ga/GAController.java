@@ -4,7 +4,7 @@ import ga.mutataion.Mutation;
 import ga.selection.Selection;
 import ga.xover.XOver;
 
-public abstract class GAController {
+public abstract class GAController { /* Using abstract factory pattern */
     OperatorFactory operatorFactory;
 
     Selection selector;

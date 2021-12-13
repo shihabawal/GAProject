@@ -11,12 +11,12 @@ public class RouletteWheelSelection implements Selection {
 
     @Override
     public Individual[] select(Population population) {
-        // Get individuals
+        /* Get individuals */
         ArrayList<Individual> individuals = population.getIndividuals();
-        // Spin roulette wheel
+        /* Spin roulette wheel */
         double populationFitness = population.getPopulationFitness();
         double rouletteWheelPosition = Math.random() * populationFitness;
-        // Find parent
+        /* Find parent */
         double spinWheel = 0;
         Individual individual1 = new Individual();
         for (Individual individual : individuals) {
@@ -24,7 +24,7 @@ public class RouletteWheelSelection implements Selection {
             if (spinWheel >= rouletteWheelPosition) {
                 individual1 = individual;
                 break;
-                // return individual;
+                /* return individual */
             }
         }
         rouletteWheelPosition = Math.random() * populationFitness;
@@ -37,7 +37,7 @@ public class RouletteWheelSelection implements Selection {
                 break;
             }
         }
-        // return individuals[population.size() - 1];
+        /* return individuals[population.size() - 1]; */
         Individual[] ret = { individual1, individual2 };
         return ret;
     }

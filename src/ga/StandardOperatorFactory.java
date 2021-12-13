@@ -7,7 +7,7 @@ import ga.selection.Selection;
 import ga.xover.MidPointXOver;
 import ga.xover.XOver;
 
-public class StandardOperatorFactory implements OperatorFactory {
+public class StandardOperatorFactory implements OperatorFactory { /* Using abstract factory pattern */
 
     @Override
     public Selection getSelection() {

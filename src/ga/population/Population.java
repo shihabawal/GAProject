@@ -8,8 +8,8 @@ public class Population {
 
     private static int size = 10;
 
-    public static Population getInstance() {
-        if (instance == null) {
+    public static Population getInstance() { /* Using singleton pattern to initialize Population class */
+        if (instance == null) { /* lazy initialize */
             instance = new Population(size);
         }
         return instance;
