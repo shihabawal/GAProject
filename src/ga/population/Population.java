@@ -9,7 +9,7 @@ public class Population {
     private static int size = 10;
 
     public static Population getInstance() { /* Using singleton pattern to initialize Population class */
-        if (instance == null) { /* lazy initialize */
+        if (instance == null) {              /* lazy initialize */
             instance = new Population(size);
         }
         return instance;
@@ -17,7 +17,7 @@ public class Population {
 
     ArrayList<Individual> individuals;
 
-    // Define and intialize population
+    /* Define and intialize population */
     private Population(int size) {
         individuals = new ArrayList<>();
         for (int i = 0; i < size; i++) {
@@ -31,7 +31,7 @@ public class Population {
     }
 
     public Individual getIndividual(int i) {
-        return individuals.get(i); // individual[i]
+        return individuals.get(i);  /* individual[i] */
     }
 
     public ArrayList<Individual> getIndividuals() {
