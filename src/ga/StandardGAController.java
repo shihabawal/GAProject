@@ -3,7 +3,7 @@ package ga;
 import ga.population.Individual;
 import ga.population.Population;
 
-public class StandardGAController extends GAController {
+public class StandardGAController extends GAController { /* Using abstract factory pattern */
 
     @Override
     public void initalize() {
