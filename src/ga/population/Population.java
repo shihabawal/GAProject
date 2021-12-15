@@ -11,7 +11,10 @@ public class Population {
     /**
      * @return Population
      */
-    public static Population getInstance() { /* Using singleton pattern to initialize Population class */
+    public static synchronized Population getInstance() { /*
+                                                           * Using thread safe singleton pattern to initialize
+                                                           * Population class
+                                                           */
         if (instance == null) { /* lazy initialize */
             instance = new Population(size);
         }

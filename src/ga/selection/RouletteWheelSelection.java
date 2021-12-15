@@ -2,10 +2,8 @@ package ga.selection;
 
 import ga.population.Individual;
 import ga.population.Population;
-// import ga.fitness.Fitness;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class RouletteWheelSelection implements Selection {
 

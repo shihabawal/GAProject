@@ -6,7 +6,7 @@ import java.util.List;
 import ga.population.Individual;
 import ga.population.Gene;
 
-public class MidPointXOver implements XOver {
+public class RandomPointXOver implements XOver {
 
     @Override
     public Individual[] doXOver(Individual[] couple) {
@@ -18,8 +18,10 @@ public class MidPointXOver implements XOver {
         List<Gene<Character>> child1Gene = new ArrayList<>();
         List<Gene<Character>> child2Gene = new ArrayList<>();
 
+        int randomPoint = (int) (Math.random() * gene1.size());
+
         for (int i = 0; i < gene1.size(); i++) {
-            if (i <= gene1.size() / 2) {
+            if (i <= randomPoint) {
                 child1Gene.add(gene1.get(i));
                 child2Gene.add(gene2.get(i));
             } else {
