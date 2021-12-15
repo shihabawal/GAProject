@@ -1,5 +1,6 @@
-package ga;
+package ga.controller;
 
+import ga.factory.OperatorFactory;
 import ga.mutataion.Mutation;
 import ga.selection.Selection;
 import ga.xover.XOver;

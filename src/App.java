@@ -1,13 +1,15 @@
-import ga.GAController;
-import ga.RandomGAController;
-import ga.StandardGAController;
+import ga.controller.GAController;
+import ga.controller.RandomGAController;
+import ga.controller.StandardGAController;
 
 public class App {
-    private static final String Individual = null;
 
     public static void main(String[] args) throws Exception {
 
         GAController controller = new RandomGAController();
+        controller.initalize();
+        controller.run();
+        controller = new StandardGAController(); /* dynamically set the strategy */
         controller.initalize();
         controller.run();
     }

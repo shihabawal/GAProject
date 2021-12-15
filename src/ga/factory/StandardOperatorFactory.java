@@ -1,13 +1,13 @@
-package ga;
+package ga.factory;
 
 import ga.mutataion.Mutation;
-import ga.mutataion.RandomCodonMutation;
+import ga.mutataion.SingleCodonMutation;
 import ga.selection.RandomSelection;
 import ga.selection.Selection;
-import ga.xover.RandomPointXOver;
+import ga.xover.MidPointXOver;
 import ga.xover.XOver;
 
-public class RandomOperatorFactory implements OperatorFactory { /* Using abstract factory pattern */
+public class StandardOperatorFactory implements OperatorFactory { /* Using abstract factory pattern */
 
     @Override
     public Selection getSelection() {
@@ -16,12 +16,12 @@ public class RandomOperatorFactory implements OperatorFactory { /* Using abstrac
 
     @Override
     public XOver getXover() {
-        return new RandomPointXOver();
+        return new MidPointXOver();
     }
 
     @Override
     public Mutation getMutation() {
-        return new RandomCodonMutation();
+        return new SingleCodonMutation();
     }
 
 }

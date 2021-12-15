@@ -1,4 +1,4 @@
-package ga;
+package ga.factory;
 
 import ga.mutataion.Mutation;
 import ga.selection.Selection;

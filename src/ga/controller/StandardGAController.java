@@ -1,7 +1,8 @@
-package ga;
+package ga.controller;
 
 import java.util.ArrayList;
 
+import ga.factory.StandardOperatorFactory;
 import ga.population.Gene;
 import ga.population.Individual;
 import ga.population.Population;

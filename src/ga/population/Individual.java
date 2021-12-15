@@ -21,16 +21,16 @@ public class Individual {
             int newRandom = rn.nextInt(4);
             if (newRandom == 0) {
                 /* genes[i] = 'a'; */
-                genes.add(new Gene('a'));
+                genes.add(new Gene<Character>('a'));
             } else if (newRandom == 1) {
                 /* genes[i] = 'c'; */
-                genes.add(new Gene('c'));
+                genes.add(new Gene<Character>('c'));
             } else if (newRandom == 2) {
                 /* genes[i] = 't'; */
-                genes.add(new Gene('t'));
+                genes.add(new Gene<Character>('t'));
             } else if (newRandom == 3) {
                 /* genes[i] = 'g'; */
-                genes.add(new Gene('g'));
+                genes.add(new Gene<Character>('g'));
             }
             /* genes[i] = Math.abs(rn.nextInt() % 2); */
         }
