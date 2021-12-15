@@ -37,7 +37,7 @@ public class Population {
     }
 
     /**
-     * the target DNA pattern we set 
+     * the target DNA pattern we set
      * 
      * @param target
      * @return int
