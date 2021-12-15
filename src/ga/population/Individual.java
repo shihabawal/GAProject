@@ -42,39 +42,77 @@ public class Individual {
         fitness = 0;
     }
 
+    
+    /** 
+     * @return List<Gene<Character>>
+     */
     public List<Gene<Character>> getGenes() {
         return genes;
     }
 
+    
+    /** 
+     * @param newGenes
+     */
     public void setGenes(List<Gene<Character>> newGenes) {
         genes = newGenes;
     }
 
+    
+    /** 
+     * @param i the index of char 
+     * @return char
+     */
     public char getCodon(int i) {
         return genes.get(i).getGene();
     }
 
+    
+    /** 
+     * @param codon codon represents a single character in DNA like "A" "T".
+     * @param i
+     */
     public void setCodon(char codon, int i) {
         genes.set(i, new Gene<Character>(codon));
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getGeneLength() {
         return geneLength;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getFitness() {
         return fitness;
     }
 
+    
+    /** 
+     * @param fitness int fitness
+     */
     public void setFitness(int fitness) {
         this.fitness = fitness;
     }
 
+    
+    /** 
+     * @return String
+     */
     @Override
     public String toString() {
         return Arrays.toString(genes.toArray()) + " fitness: " + fitness;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean isTarget() {
         if ((this.getCodon((int) ((this.getGeneLength() - 1) * .25)) == 'a')
                 && (this.getCodon((int) ((this.getGeneLength() - 1) * .75)) == 'a')) {

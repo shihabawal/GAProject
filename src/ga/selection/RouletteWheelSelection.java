@@ -9,6 +9,14 @@ import java.util.Random;
 
 public class RouletteWheelSelection implements Selection {
 
+    
+    /** 
+     * @param population population is a class that has multiple methods like getIndividuals/getPopulationFitness.
+     * 
+     * @return Individual[] 
+     * for example, Individual1 would be the first parent,
+     * Individual2 would be the second parent.
+     */
     @Override
     public Individual[] select(Population population) {
         /* Get individuals */
