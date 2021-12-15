@@ -2,7 +2,7 @@ package ga;
 
 import ga.mutataion.Mutation;
 import ga.mutataion.SingleCodonMutation;
-import ga.selection.RouletteWheelSelection;
+import ga.selection.RandomSelection;
 import ga.selection.Selection;
 import ga.xover.MidPointXOver;
 import ga.xover.XOver;
@@ -11,7 +11,7 @@ public class StandardOperatorFactory implements OperatorFactory { /* Using abstr
 
     @Override
     public Selection getSelection() {
-        return new RouletteWheelSelection();
+        return new RandomSelection();
     }
 
     @Override

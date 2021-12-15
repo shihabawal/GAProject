@@ -20,6 +20,8 @@ public class StandardGAController extends GAController { /* Using abstract facto
         Individual[] couple = { null, null };
         Individual[] children = { null, null };
         ArrayList<Gene<Character>> targetGene = new ArrayList<>();
+        // new Gene('x') is a don't care gene i.e. it could be any gene 'a', 'c', 't' or
+        // 'g'
         targetGene.add(new Gene<Character>('a'));
         targetGene.add(new Gene<Character>('x'));
         targetGene.add(new Gene<Character>('x'));
@@ -52,7 +54,8 @@ public class StandardGAController extends GAController { /* Using abstract facto
             // System.out.println("Before: " + children[0]);
             // System.out.println("After : " + children[0]);
             // System.out.println();
-            // TODO: Replacement
+            population.replaceLeastFittest(children[0]);
+            population.replaceLeastFittest(children[1]);
             generation++;
         } while (generation < maxGenerations && (!children[0].isTarget(target) ||
                 !children[1].isTarget(target)));

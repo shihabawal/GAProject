@@ -1,6 +1,5 @@
 package ga.population;
 
-import java.security.InvalidAlgorithmParameterException;
 import java.util.ArrayList;
 
 public class Population {
@@ -10,7 +9,6 @@ public class Population {
     private static int size = 10;
 
     /**
-     * @param size we set size = 10;
      * @return Population
      */
     public static Population getInstance() { /* Using singleton pattern to initialize Population class */
@@ -54,6 +52,18 @@ public class Population {
      */
     public Individual getIndividual(int i) {
         return individuals.get(i); /* individual[i] */
+    }
+
+    public void replaceLeastFittest(Individual individual) {
+        int minFitness = Integer.MAX_VALUE;
+        int minFitnessIndex = 0;
+        for (int i = 0; i < size; i++) {
+            if (individuals.get(i).getFitness() < minFitness) {
+                minFitness = individuals.get(i).getFitness();
+                minFitnessIndex = i;
+            }
+        }
+        individuals.set(minFitnessIndex, individuals.get(minFitnessIndex));
     }
 
     public void addIndividual(Individual individual) {

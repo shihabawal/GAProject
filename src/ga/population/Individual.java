@@ -7,7 +7,6 @@ import java.util.List;
 
 public class Individual {
     int fitness;
-    /* char[] genes */
     List<Gene<Character>> genes;
     private final int geneLength = 10;
 
@@ -65,7 +64,8 @@ public class Individual {
     }
 
     /**
-     * @param codon codon represents a single character in DNA like "A" "T".
+     * @param codon codon represents a single character in DNA like "a", "c", "t" or
+     *              "g".
      * @param i
      */
     public void setCodon(char codon, int i) {
