@@ -36,10 +36,11 @@ public class RandomGAController extends GAController { /* Using abstract factory
         targetGene.add(new Gene<Character>('x'));
         Individual target = new Individual(targetGene);
         Population population = Population.getInstance();
-        System.out.println(population.calculatePopulationFitness(target));
 
+        System.out.println("Population: ");
         System.out.println(population);
-        System.out.println("target: " + target);
+        System.out.println("Population total Fitness: " + population.calculatePopulationFitness(target));
+        System.out.println("Target: " + target);
         do {
             // System.out.println(population);
             // System.out.println();
@@ -61,7 +62,10 @@ public class RandomGAController extends GAController { /* Using abstract factory
             generation++;
         } while (generation < maxGenerations && (!children[0].isTarget(target) ||
                 !children[1].isTarget(target)));
-        System.out.println(generation);
+        System.out.println();
+        System.out.println("Found Target using Random GA Controller: " + (generation != maxGenerations));
+        System.out.println("Generation count: " + generation);
+        System.out.println();
 
     }
 

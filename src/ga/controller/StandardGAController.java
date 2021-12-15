@@ -14,6 +14,7 @@ public class StandardGAController extends GAController { /* Using abstract facto
         operatorFactory = new StandardOperatorFactory();
         super.initalize();
     }
+
     /* Strategy function running strategy */
     public void run() {
         int maxGenerations = 1000;
@@ -35,9 +36,10 @@ public class StandardGAController extends GAController { /* Using abstract facto
         targetGene.add(new Gene<Character>('x'));
         Individual target = new Individual(targetGene);
         Population population = Population.getInstance();
-        System.out.println(population.calculatePopulationFitness(target));
 
+        System.out.println("Population: ");
         System.out.println(population);
+        System.out.println("Population total Fitness: " + population.calculatePopulationFitness(target));
         System.out.println("target: " + target);
         do {
             // System.out.println(population);
@@ -60,7 +62,10 @@ public class StandardGAController extends GAController { /* Using abstract facto
             generation++;
         } while (generation < maxGenerations && (!children[0].isTarget(target) ||
                 !children[1].isTarget(target)));
-        System.out.println(generation);
+        System.out.println();
+        System.out.println("Found Target using Standard GA Controller: " + (generation != maxGenerations));
+        System.out.println("Generation count: " + generation);
+        System.out.println();
 
     }
 
