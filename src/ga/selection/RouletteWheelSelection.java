@@ -14,7 +14,7 @@ public class RouletteWheelSelection implements Selection {
         /* Get individuals */
         ArrayList<Individual> individuals = population.getIndividuals();
         /* Spin roulette wheel */
-        double populationFitness = population.getPopulationFitness();
+        double populationFitness = (double) population.getPopulationFitness();
         double rouletteWheelPosition = Math.random() * populationFitness;
         /* Find parent */
         double spinWheel = 0;

@@ -7,9 +7,9 @@ import java.util.List;
 
 public class Individual {
     int fitness;
-     /* char[] genes */
+    /* char[] genes */
     List<Gene<Character>> genes;
-    private final int geneLength = 20;
+    private final int geneLength = 10;
 
     /* initailize an individual and their genes */
     public Individual() {
@@ -17,14 +17,14 @@ public class Individual {
         genes = new ArrayList<>();
         Random rn = new Random();
 
-    /* Set genes randomly for each individual */
+        /* Set genes randomly for each individual */
         for (int i = 0; i < geneLength; i++) {
             int newRandom = rn.nextInt(4);
             if (newRandom == 0) {
-                 /* genes[i] = 'a'; */
+                /* genes[i] = 'a'; */
                 genes.add(new Gene('a'));
             } else if (newRandom == 1) {
-                /*  genes[i] = 'c'; */
+                /* genes[i] = 'c'; */
                 genes.add(new Gene('c'));
             } else if (newRandom == 2) {
                 /* genes[i] = 't'; */
@@ -33,7 +33,7 @@ public class Individual {
                 /* genes[i] = 'g'; */
                 genes.add(new Gene('g'));
             }
-                /* genes[i] = Math.abs(rn.nextInt() % 2); */
+            /* genes[i] = Math.abs(rn.nextInt() % 2); */
         }
     }
 
@@ -70,18 +70,30 @@ public class Individual {
         this.fitness = fitness;
     }
 
+    public boolean isTarget(Individual target) {
+        for (int i = 0; i < geneLength; i++) {
+            if (target.genes.get(i).getGene() == 'x') {
+                continue;
+            }
+            if (target.genes.get(i).getGene() != this.genes.get(i).getGene()) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public int calculateFitness(Individual target) {
+        for (int i = 0; i < geneLength; i++) {
+            if (target.genes.get(i).getGene() == this.genes.get(i).getGene()) {
+                fitness++;
+            }
+        }
+        return fitness;
+    }
+
     @Override
     public String toString() {
         return Arrays.toString(genes.toArray()) + " fitness: " + fitness;
-    }
-
-    public boolean isTarget() {
-        if ((this.getCodon((int) ((this.getGeneLength() - 1) * .25)) == 'a')
-                && (this.getCodon((int) ((this.getGeneLength() - 1) * .75)) == 'a')) {
-            return true;
-        } else {
-            return false;
-        }
     }
 
 }

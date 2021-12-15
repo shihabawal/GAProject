@@ -1,5 +1,8 @@
 package ga;
 
+import java.util.ArrayList;
+
+import ga.population.Gene;
 import ga.population.Individual;
 import ga.population.Population;
 
@@ -16,8 +19,24 @@ public class StandardGAController extends GAController { /* Using abstract facto
         int generation = 0;
         Individual[] couple = { null, null };
         Individual[] children = { null, null };
+        ArrayList<Gene<Character>> targetGene = new ArrayList<>();
+        targetGene.add(new Gene<Character>('a'));
+        targetGene.add(new Gene<Character>('x'));
+        targetGene.add(new Gene<Character>('x'));
+        targetGene.add(new Gene<Character>('x'));
+        targetGene.add(new Gene<Character>('x'));
+        targetGene.add(new Gene<Character>('c'));
+        targetGene.add(new Gene<Character>('x'));
+        targetGene.add(new Gene<Character>('x'));
+        targetGene.add(new Gene<Character>('x'));
+        targetGene.add(new Gene<Character>('x'));
+        Individual target = new Individual(targetGene);
+        Population population = Population.getInstance();
+        System.out.println(population.calculatePopulationFitness(target));
+
+        System.out.println(population);
+        System.out.println("target: " + target);
         do {
-            Population population = Population.getInstance();
             // System.out.println(population);
             // System.out.println();
             couple = selector.select(population);
@@ -35,8 +54,8 @@ public class StandardGAController extends GAController { /* Using abstract facto
             // System.out.println();
             // TODO: Replacement
             generation++;
-        } while (generation < maxGenerations && (!children[0].isTarget() ||
-                !children[1].isTarget()));
+        } while (generation < maxGenerations && (!children[0].isTarget(target) ||
+                !children[1].isTarget(target)));
         System.out.println(generation);
 
     }
