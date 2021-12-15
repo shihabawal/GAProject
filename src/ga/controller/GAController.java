@@ -12,7 +12,7 @@ public abstract class GAController { /* Using abstract factory pattern */
     XOver xOver;
     Mutation mutator;
 
-    public void initalize() {
+    public void initialize() {
         selector = operatorFactory.getSelection();
         xOver = operatorFactory.getXover();
         mutator = operatorFactory.getMutation();

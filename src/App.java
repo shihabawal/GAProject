@@ -11,10 +11,10 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         GAController controller = new RandomGAController();
-        controller.initalize();
+        controller.initialize();
         controller.run();
         controller = new StandardGAController(); /* dynamically set the strategy */
-        controller.initalize();
+        controller.initialize();
         controller.run();
     }
 

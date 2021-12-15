@@ -37,9 +37,9 @@ public class Population {
     }
 
     /**
-     * the target DNA pattern we set
+     * we calculate the fitness based on target
      * 
-     * @param target
+     * @param target the target DNA pattern we set
      * @return int
      */
     public int calculatePopulationFitness(Individual target) {
@@ -58,6 +58,8 @@ public class Population {
     }
 
     /**
+     * get the specific individual at index i
+     * 
      * @param i index of the array
      * @return Individual
      */
@@ -66,6 +68,8 @@ public class Population {
     }
 
     /**
+     * replace the individual that has least fittese
+     * 
      * @param individual
      */
     public void replaceLeastFittest(Individual individual) {
@@ -81,6 +85,8 @@ public class Population {
     }
 
     /**
+     * add the individual size
+     * 
      * @param individual
      */
     public void addIndividual(Individual individual) {

@@ -8,6 +8,8 @@ import java.util.ArrayList;
 public class RouletteWheelSelection implements Selection {
 
     /**
+     * do the roulette wheel selection
+     * 
      * @param population population is a class that has multiple methods like
      *                   getIndividuals/getPopulationFitness.
      * 

@@ -66,6 +66,8 @@ public class Individual {
     }
 
     /**
+     * set codon
+     * 
      * @param codon codon represents a single character in DNA like "a", "c", "t" or
      *              "g".
      * @param i
@@ -75,6 +77,8 @@ public class Individual {
     }
 
     /**
+     * get the length of gene
+     * 
      * @return int
      */
     public int getGeneLength() {
@@ -82,6 +86,8 @@ public class Individual {
     }
 
     /**
+     * get the fitness
+     * 
      * @return int
      */
     public int getFitness() {
@@ -89,6 +95,8 @@ public class Individual {
     }
 
     /**
+     * set the fitness
+     * 
      * @param fitness int fitness
      */
     public void setFitness(int fitness) {
@@ -96,9 +104,9 @@ public class Individual {
     }
 
     /**
-     * the target DNA pattern we set 
+     * check if it matches our target
      * 
-     * @param target
+     * @param target the target DNA pattern we set
      * @return boolean
      */
     public boolean isTarget(Individual target) {
@@ -114,8 +122,9 @@ public class Individual {
     }
 
     /**
-     * the target DNA pattern we set 
-     * @param target
+     * calculate the fitness based on our target
+     * 
+     * @param target the target DNA pattern we set
      * @return int
      */
     public int calculateFitness(Individual target) {

@@ -9,10 +9,12 @@ import ga.population.Population;
 
 public class RandomGAController extends GAController { /* Using abstract factory pattern */
 
+    /* override the initialize method in the super class GAController */
+
     @Override
-    public void initalize() {
+    public void initialize() {
         operatorFactory = new RandomOperatorFactory();
-        super.initalize();
+        super.initialize();
     }
 
     /* Strategy function running strategy */

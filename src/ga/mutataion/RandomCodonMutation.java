@@ -7,6 +7,8 @@ import java.util.Random;
 public class RandomCodonMutation implements Mutation {
 
     /**
+     * override the mutate method on Mutation class and return individual
+     * 
      * @param individual
      * @return Individual
      */

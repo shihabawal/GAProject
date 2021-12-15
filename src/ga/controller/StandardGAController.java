@@ -10,9 +10,9 @@ import ga.population.Population;
 public class StandardGAController extends GAController { /* Using abstract factory pattern */
 
     @Override
-    public void initalize() {
+    public void initialize() {
         operatorFactory = new StandardOperatorFactory();
-        super.initalize();
+        super.initialize();
     }
 
     /* Strategy function running strategy */

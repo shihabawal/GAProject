@@ -5,8 +5,10 @@ import ga.population.Individual;
 import java.util.Random;
 
 public class SingleCodonMutation implements Mutation {
-    
-    /** 
+
+    /**
+     * override the mutate method on Mutation class and return individual
+     * 
      * @param individual
      * @return Individual
      */
