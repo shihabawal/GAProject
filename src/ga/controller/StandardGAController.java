@@ -9,6 +9,8 @@ import ga.population.Population;
 
 public class StandardGAController extends GAController { /* Using abstract factory pattern */
 
+    /* override the initialize method in the super class GAController */
+    
     @Override
     public void initialize() {
         operatorFactory = new StandardOperatorFactory();
