@@ -9,6 +9,10 @@ public class Population {
 
     private static int size = 10;
 
+    /**
+     * @param size we set size = 10;
+     * @return Population
+     */
     public static Population getInstance() { /* Using singleton pattern to initialize Population class */
         if (instance == null) { /* lazy initialize */
             instance = new Population(size);
@@ -37,10 +41,17 @@ public class Population {
         return sum;
     }
 
+    /**
+     * @return int
+     */
     public int size() {
         return size;
     }
 
+    /**
+     * @param i index of the array
+     * @return Individual
+     */
     public Individual getIndividual(int i) {
         return individuals.get(i); /* individual[i] */
     }
@@ -50,10 +61,16 @@ public class Population {
         size++;
     }
 
+    /**
+     * @return ArrayList<Individual>
+     */
     public ArrayList<Individual> getIndividuals() {
         return individuals;
     }
 
+    /**
+     * @return int
+     */
     public int getPopulationCount() {
         return individuals.size();
     }
@@ -62,6 +79,9 @@ public class Population {
         return totalFitness;
     }
 
+    /**
+     * @return String
+     */
     @Override
     public String toString() {
         String toPrint = "";

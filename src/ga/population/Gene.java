@@ -7,14 +7,26 @@ public class Gene<T> {
         gene = aGene;
     }
 
+    
+    /** 
+     * @return T
+     */
     public T getGene() {
         return gene;
     }
 
+    
+    /** 
+     * @param aGene set aGene=gene
+     */
     public void setGene(T aGene) {
         gene = aGene;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String toString() {
         return gene.toString();
     }

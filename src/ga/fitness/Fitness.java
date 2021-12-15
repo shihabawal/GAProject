@@ -11,10 +11,16 @@ public class Fitness {
 
     static ArrayList<Character> solution = new ArrayList<Character>();
 
+    /**
+     * @param newSolution set a reference to ArrayList<Character>
+     */
     public static void setSolution(ArrayList<Character> newSolution) {
         solution = newSolution;
     }
 
+    /**
+     * @param newSolution create a new String type of newsolution
+     */
     static void setSolution(String newSolution) {
         solution = new ArrayList<Character>(newSolution.length());
         for (int i = 0; i < newSolution.length(); i++) {
@@ -27,6 +33,10 @@ public class Fitness {
         }
     }
 
+    /**
+     * @param individual class individual
+     * @return int
+     */
     /* Calculate inidividuals fittness by comparing it to our candidate solution */
     public static int getFitness(Individual individual) {
         int fitness = 0;
@@ -39,6 +49,9 @@ public class Fitness {
         return fitness;
     }
 
+    /**
+     * @return int
+     */
     /* Get optimum fitness */
     static int getMaxFitness() {
         int maxFitness = solution.size();
