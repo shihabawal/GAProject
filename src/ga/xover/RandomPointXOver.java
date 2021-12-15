@@ -8,6 +8,16 @@ import ga.population.Gene;
 
 public class RandomPointXOver implements XOver {
 
+    /**
+     * Perform reproduction between two individuals as parents and produce two
+     * individuals as children. The cross over occurs at a random point of the Gene
+     * array of the parent individuals
+     * 
+     * @param couple Array containing two individuals that will be parents for
+     *               performing cross over
+     * @return Individual[] Array containing two individuals that are the children,
+     *         a result of cross over
+     */
     @Override
     public Individual[] doXOver(Individual[] couple) {
         Individual children[] = { null, null };

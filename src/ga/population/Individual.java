@@ -93,6 +93,10 @@ public class Individual {
         this.fitness = fitness;
     }
 
+    /**
+     * @param target
+     * @return boolean
+     */
     public boolean isTarget(Individual target) {
         for (int i = 0; i < geneLength; i++) {
             if (target.genes.get(i).getGene() == 'x') {
@@ -105,6 +109,10 @@ public class Individual {
         return true;
     }
 
+    /**
+     * @param target
+     * @return int
+     */
     public int calculateFitness(Individual target) {
         for (int i = 0; i < geneLength; i++) {
             if (target.genes.get(i).getGene() == this.genes.get(i).getGene()) {
@@ -114,6 +122,9 @@ public class Individual {
         return fitness;
     }
 
+    /**
+     * @return String
+     */
     @Override
     public String toString() {
         return Arrays.toString(genes.toArray()) + " fitness: " + fitness;

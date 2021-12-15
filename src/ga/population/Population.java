@@ -9,6 +9,8 @@ public class Population {
     private static int size = 10;
 
     /**
+     * Returns a threadsafe Singleton instance
+     * 
      * @return Population
      */
     public static synchronized Population getInstance() { /*
@@ -34,12 +36,16 @@ public class Population {
         totalFitness = 0;
     }
 
+    /**
+     * @param target
+     * @return int
+     */
     public int calculatePopulationFitness(Individual target) {
-        int sum = 0;
+        totalFitness = 0;
         for (Individual individual : individuals) {
-            sum += individual.calculateFitness(target);
+            totalFitness += individual.calculateFitness(target);
         }
-        return sum;
+        return totalFitness;
     }
 
     /**
@@ -57,6 +63,9 @@ public class Population {
         return individuals.get(i); /* individual[i] */
     }
 
+    /**
+     * @param individual
+     */
     public void replaceLeastFittest(Individual individual) {
         int minFitness = Integer.MAX_VALUE;
         int minFitnessIndex = 0;
@@ -69,6 +78,9 @@ public class Population {
         individuals.set(minFitnessIndex, individuals.get(minFitnessIndex));
     }
 
+    /**
+     * @param individual
+     */
     public void addIndividual(Individual individual) {
         individuals.add(individual);
         size++;
@@ -88,6 +100,9 @@ public class Population {
         return individuals.size();
     }
 
+    /**
+     * @return int
+     */
     public int getPopulationFitness() {
         return totalFitness;
     }
