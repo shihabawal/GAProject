@@ -49,7 +49,9 @@ public class Individual {
     }
 
     /**
-     * @param newGenes
+     * replace gene array for individual
+     * 
+     * @param newGenes new gene array
      */
     public void setGenes(List<Gene<Character>> newGenes) {
         genes = newGenes;
@@ -94,6 +96,8 @@ public class Individual {
     }
 
     /**
+     * the target DNA pattern we set 
+     * 
      * @param target
      * @return boolean
      */
@@ -110,6 +114,7 @@ public class Individual {
     }
 
     /**
+     * the target DNA pattern we set 
      * @param target
      * @return int
      */

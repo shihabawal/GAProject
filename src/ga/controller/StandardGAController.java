@@ -14,7 +14,7 @@ public class StandardGAController extends GAController { /* Using abstract facto
         operatorFactory = new StandardOperatorFactory();
         super.initalize();
     }
-
+    /* Strategy function running strategy */
     public void run() {
         int maxGenerations = 1000;
         int generation = 0;

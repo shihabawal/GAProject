@@ -15,6 +15,7 @@ public class RandomGAController extends GAController { /* Using abstract factory
         super.initalize();
     }
 
+    /* Strategy function running strategy */
     public void run() {
         int maxGenerations = 1000;
         int generation = 0;
